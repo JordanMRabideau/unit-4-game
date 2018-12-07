@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Crystal Game</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <div class="container-fluid m-2">
+            <div class="row">
+                <div class="col-md-auto bg-warning">
+                    <h1>Crystal Collector!</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class= "directions col-md-4">
+                    <p>At the start of the game, you will be given a random number.</p>
+                    <p>By clicking on one of the four crystals below, your total score will increase by a set amount</p>
+                    <p>The value of each crystal is hidden from you until you click on it.</p>
+                    <p>You win the game by matching your score to the random number chosen at the start of the game. You lose if your score goes over the desired number.</p>
+                    <p>The value of each crystal will change at the start of each new round. Good luck!</p>
+                </div>
+            </div>
+
+            <div class="row mb-2" style="height: 110px">
+                <div class="randNumBox col-md-2 mr-2 bg-success">
+                    <h3 class="randomNum"></h3>
+                </div>
+                <div class="winBox col-md-1 bg-info">
+                    <p>Wins: <span id="winNum"></span></p>
+                    <p>Losses: <span id="lossNum"></span></p>
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="gems col-md-auto">
+                    <input type="image" id="redGem" src="assets/images/redgem.png" alt="Red-Gem" style="height:100px; width:100px">
+                    <input type="image" id="greenGem" src="assets/images/greengem.png" alt="Green-Gem" style="height:100px; width:100px">
+                    <input type="image" id="yellowGem" src="assets/images/yellowgem.jpg" alt="Yellow-Gem" style="height:100px; width:100px">
+                    <input type="image" id="blueGem" src="assets/images/bluegem.jpg" alt="Blue-Gem" style="height:100px; width:100px">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="score col-md-2 bg-info" style="height: 110px">
+                    <p>Your current score is:</p>
+                    <h3 id="currentScore"></h3>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    
+</html>
