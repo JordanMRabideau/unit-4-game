@@ -19,18 +19,19 @@ function newNumbers() {
 }
 
 function checkWin() {
-    if (scoreHolder == randomNum.text()) {
+    
+    if (score.text() == randomNum.text()) {
         $("#winNum").text(wins += 1);
-        alert('You win!');
         newNumbers();
         scoreHolder = 0;
         score.text("");
-    } else if (parseInt(randomNum.text()) < scoreHolder) {
+        alert('You win!');
+    } else if (parseInt(randomNum.text()) < parseInt(score.text())) {
         $("#lossNum").text(losses += 1);
-        alert('You lose.');
         newNumbers();
         scoreHolder = 0;
         score.text("")
+        alert('You lose.');
     };
 }
 // Click event that differentiates between buttons and adds the value of each button to the score
@@ -43,9 +44,8 @@ $(".gems").on("click", function(evt) {
         score.text(scoreHolder += parseInt(yellowGem.val()));
     } else if (evt.target.id === 'blueGem') {
         score.text(scoreHolder += parseInt(blueGem.val()));
-    };
+    };    
     checkWin();
-    
 });
 
 function newGame() {
@@ -55,4 +55,4 @@ function newGame() {
 }
 
 newGame();
-console.log(parseInt(randomNum.text()))
+console.log(score.text())
