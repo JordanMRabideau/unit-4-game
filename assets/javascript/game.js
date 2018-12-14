@@ -19,15 +19,15 @@ function newNumbers() {
 }
 
 function checkWin() {
-    
+    // May want to insert FUNCTION TIMEOUTS to ensure the end score is displayed before the alert
     if (score.text() == randomNum.text()) {
-        $("#winNum").text(wins += 1);
+        $("#winNum").text(wins++);
         newNumbers();
         scoreHolder = 0;
         score.text("");
         alert('You win!');
     } else if (parseInt(randomNum.text()) < parseInt(score.text())) {
-        $("#lossNum").text(losses += 1);
+        $("#lossNum").text(losses++);
         newNumbers();
         scoreHolder = 0;
         score.text("")
@@ -44,7 +44,8 @@ $(".gems").on("click", function(evt) {
         score.text(scoreHolder += parseInt(yellowGem.val()));
     } else if (evt.target.id === 'blueGem') {
         score.text(scoreHolder += parseInt(blueGem.val()));
-    };    
+    };
+    console.log(score.text())    
     checkWin();
 });
 
@@ -55,4 +56,4 @@ function newGame() {
 }
 
 newGame();
-console.log(score.text())
+console.log(randomNum.text())
